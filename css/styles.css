@@ -601,6 +601,8 @@ html.js .timeline__item:nth-child(3) { transition-delay: 0.16s; }
 html.js .timeline__item:nth-child(4) { transition-delay: 0.24s; }
 html.js .timeline__item:nth-child(5) { transition-delay: 0.32s; }
 html.js .timeline__item:nth-child(6) { transition-delay: 0.4s; }
+html.js .timeline__item:nth-child(7) { transition-delay: 0.48s; }
+html.js .timeline__item:nth-child(8) { transition-delay: 0.56s; }
 
 /* ─── RESPONSIVO ────────────────────────────────────────────── */
 @media (max-width: 900px) {

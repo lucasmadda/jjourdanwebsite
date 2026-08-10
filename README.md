@@ -39,21 +39,28 @@ A única dependência externa é o `@import` do Google Fonts (Fraunces + Inter) 
 | Retrato de João | `index.html`, elemento `#foto-retrato` — mesmo procedimento |
 | WhatsApp, e-mail e Instagram | Buscar `data-todo="contato"` no `index.html` (6 ocorrências: 3 na seção de contato, 3 no rodapé) e colocar links reais (`https://wa.me/…`, `mailto:…`, `https://instagram.com/…`). Depois, remover a linha "Canais em atualização…" |
 
-## Checklist — VALIDAR COM JOÃO antes de publicar
+## Checklist — VALIDAR COM JOÃO antes de divulgar
 
 Cada item tem um comentário `<!-- VALIDAR COM JOÃO -->` no ponto exato do `index.html`:
 
-1. **Título e anos** — as fontes públicas o registram como *bartender* do Miam Miam; o site o apresenta como *maître*. Confirmar o(s) título(s) e o ano em que entrou na casa.
-2. **Recorte de 2001** — contexto real da menção na imprensa de 1–7 de novembro de 2001 (veículo e casa da época).
-3. **MOK Sakebar** — período, função e grafia (a linha do tempo diz "c. 2011").
+1. **Título** — a imprensa o registra como *barman* do Miam Miam; o site o apresenta como *maître* (informação da família/amigos). Confirmar o(s) título(s).
+2. **Militância estudantil (2001)** — a timeline abre com a liderança no movimento estudantil (Folha Dirigida, 1º–7/11/2001, p. 9). Confirmar se ele quer esse capítulo no site e como prefere descrevê-lo.
+3. **MOK Sakebar** — a entrada saiu da timeline: os próprios recortes mostram que, em 2009, o barman do MOK era Fabiano Dias; nenhum documento liga João à casa. Se ele teve passagem real por lá, colher período e função para recolocar.
 4. **Vínculo atual** — se João segue no Miam Miam após a reformulação dos 20 anos (2025).
 5. **Fé** — o termo que ele prefere (candomblé, umbanda, axé…) e se quer o tema no site. A coluna "Fé" da seção Raízes pode ser removida sem quebrar o layout.
 6. **Biologia** — o texto diz "conhece biologia"; confirmar formação/estudo real.
-7. **Ingredientes** — Pacam, Lichee Martini e Caipi du Bois estão como "receita da casa"; confirmar com ele.
-8. **O próximo capítulo** — a formulação do projeto do restaurante de brasilidades (público, propósito, termos). O projeto ainda não tem nome — nada foi batizado.
+7. **O próximo capítulo** — a formulação do projeto do restaurante de brasilidades (público, propósito, termos). O projeto ainda não tem nome — nada foi batizado.
 
-## Fatos com fonte pública
+## Fatos documentados (recortes fornecidos pela família + fontes públicas)
 
-- Dicas de clientes no Foursquare e o guia da Time Out registram João Jourdan como criador da maior parte da carta de drinques do Miam Miam ("ele sabe agradar cada paladar").
-- Em dezembro de 2014, foi um dos 8 vencedores nacionais do concurso **Cocktail Journey** (Ketel One + Tanqueray Nº TEN/Diageo), que avaliou cerca de 100 bares e restaurantes em 20 cidades — classificando-se para a etapa brasileira do **Diageo World Class** (ciclo 2015).
-- O Miam Miam abriu em 2005, tem o **Bib Gourmand** do Guia Michelin (2015 → guia 2026), venceu o prêmio Rio Show de "melhor moderno" (2007–2008) e o Veja Rio Comer & Beber de "melhor carta de drinques"; celebrou 20 anos em 2025.
+- **Nome completo**: João Carlos Graf Accioli Jourdan (certificado World Class, 2012).
+- **2001** — Folha Dirigida (1º–7/11/2001, p. 9, foto de Salvador Scofano): "João Carlos Jourdan comemorou unidade da oposição na etapa do Rio" — liderança estudantil secundarista carioca.
+- **2005** — Miam Miam inaugura; o rosito "estrela a carta de drinques da casa desde a inauguração" (Rio Show/O Globo, 29/05/2009).
+- **2008** — Veja (8/10/2008, p. 117), prêmio "A melhor carta de drinques": "Sob os cuidados da simpática Danni Camilo … e do barman João Jourdan, a esmerada carta de drinques lista 36 opções." Em agosto, lança os **long shots de sagu** (O Globo Zona Sul, 14/08/2008).
+- **2009** — Rio Show: mojitos (~30 por noite, três gotas de angostura, "melhores que os de Cuba" segundo o publicitário Flávio Medeiros); Miam Miam bicampeão de "melhor moderno" no Rio Show Gastronomia; a dupla Danni Camilo + João Jourdan assina também a carta do **OuiOui** (revista Oh!/O Globo — cola-daiquiri: melado da fazenda, limão, rum e chips de cola).
+- **2012** — Certificado **Programa World Class** (Diageo): etapas de 14–15/05/2012, em São Paulo.
+- **2014** — Um dos 8 vencedores nacionais do **Cocktail Journey** (Ketel One + Tanqueray Nº TEN/Diageo) → etapa brasileira do **Diageo World Class** (ciclo 2015).
+- Miam Miam: **Bib Gourmand** do Guia Michelin (2015 → guia 2026); 20 anos celebrados em 2025.
+- Foursquare/Time Out (dicas de clientes): "a maior parte dos drinques foi criada por ele… ele sabe agradar cada paladar".
+
+Os três PDFs de origem (recortes de imprensa, certificado World Class e páginas de 2001) ficam com a família — não estão no repositório.
