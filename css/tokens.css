@@ -1,0 +1,92 @@
+/* ============================================================
+   JOÃO JOURDAN — Design Tokens
+   Conceito: "O líquido e a folha".
+   Verde-mata (estrutura) + creme-linho (fundo) + âmbar-amburana
+   (accent). REGRA DO ACCENT: o âmbar é o líquido — aparece
+   APENAS na hero (líquido do SVG e gradient do H1). Em nenhum
+   outro lugar da página.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* ─── CORES DE MARCA ────────────────────────────────────── */
+  --brand-deep:  #24342A;   /* verde-mata: display, CTAs, footer, sombras */
+  --brand-mid:   #55684F;   /* verde-sálvia: texto secundário, eyebrows, ícones */
+  --brand-soft:  #CBD3BD;   /* verde-claro: detalhes de ilustração */
+  --bg-warm:     #F3EBDD;   /* creme-linho: fundo dominante (nunca #fff) */
+  --bg-warm-2:   #E9DFC9;   /* creme escurecido: seções alternadas */
+  --accent:      #C4802F;   /* âmbar-amburana — SÓ no líquido da taça (hero) */
+  --accent-deep: #A9691F;   /* âmbar escurecido — parada do gradient do H1 (contraste 3:1) */
+  --accent-soft: #D89B4A;   /* âmbar claro — superfície do líquido */
+  --ink:         #2A2B26;   /* corpo de texto */
+  --white:       #ffffff;   /* apenas na seção de reconhecimento e cards */
+
+  /* ─── SEMÂNTICA ─────────────────────────────────────────── */
+  --bg:            var(--bg-warm);
+  --bg-elevated:   var(--white);
+  --bg-inverse:    var(--brand-deep);
+  --fg:            var(--ink);
+  --fg-muted:      var(--brand-mid);
+  --fg-inverse:    var(--bg-warm);
+  --border:          rgba(36, 52, 42, 0.12);
+  --border-hairline: rgba(36, 52, 42, 0.06);
+  --border-strong:   rgba(36, 52, 42, 0.30);
+  --border-on-dark:  rgba(243, 235, 221, 0.25);
+
+  /* ─── TIPOGRAFIA — serif display + sans de trabalho ─────── */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600;
+
+  --fs-eyebrow: 12px;
+  --fs-body-sm: 14px;
+  --fs-body:    16px;
+  --fs-h3: clamp(28px, 3vw, 40px);
+  --fs-h2: clamp(36px, 4.5vw, 64px);
+  --fs-h1: clamp(48px, 9vw, 112px);
+
+  --tracking-tight:  -0.03em;  /* display serif tolera menos aperto */
+  --tracking-normal: -0.02em;
+  --tracking-wide:    0.18em;  /* wordmark */
+  --tracking-wider:   0.28em;  /* eyebrows */
+
+  --lh-display: 1; --lh-tight: 1.05; --lh-snug: 1.15; --lh-body: 1.6;
+
+  /* ─── ESPAÇO — 8pt grid ─────────────────────────────────── */
+  --space-1: 8px;  --space-2: 16px; --space-3: 24px; --space-4: 32px;
+  --space-5: 48px; --space-6: 64px; --space-7: 96px; --space-8: 128px;
+  --container-max: 1200px;
+  --container-pad: 48px;
+  --section-pad-y: 120px;
+
+  /* ─── RAIOS ─────────────────────────────────────────────── */
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 20px; --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* ─── SOMBRAS — tingidas com o verde-mata ───────────────── */
+  --shadow-sm: 0 8px 24px  rgba(36, 52, 42, 0.08);
+  --shadow-md: 0 20px 60px rgba(36, 52, 42, 0.15);
+  --shadow-lg: 0 30px 80px rgba(36, 52, 42, 0.18);
+
+  /* ─── MOVIMENTO ─────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 0.2s;
+  --duration-med:  0.4s;
+  --duration-slow: 0.8s;
+
+  /* ─── GRADIENT DE ASSINATURA (só no H1 da hero) ─────────── */
+  --gradient-signature: linear-gradient(100deg,
+    var(--brand-deep) 0%, var(--brand-mid) 30%,
+    var(--accent-deep) 62%, var(--brand-deep) 100%);
+}
+
+/* Acessibilidade de movimento — obrigatório */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

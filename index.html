@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>João Jourdan — Maître · Miam Miam, Rio de Janeiro</title>
+  <meta name="description" content="João Jourdan, maître e autor da carta de drinques do Miam Miam, em Botafogo. Vinte anos de hospitalidade carioca — e o próximo capítulo: um restaurante de brasilidades.">
+  <meta property="og:title" content="João Jourdan — Maître · Miam Miam, Rio">
+  <meta property="og:description" content="Vinte anos de salão, uma carta de drinques com assinatura e um sonho de brasilidades.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <header class="nav" id="topo">
+    <a class="nav__wordmark" href="#inicio">João Jourdan</a>
+    <nav class="nav__links" aria-label="Seções da página">
+      <a href="#trajetoria">Trajetória</a>
+      <a href="#carta">A carta</a>
+      <a href="#raizes">Raízes</a>
+      <a href="#reconhecimento">Reconhecimento</a>
+    </nav>
+    <a class="btn btn--primary btn--compact" href="#contato">Fale com João</a>
+  </header>
+
+  <main>
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section class="hero" id="inicio">
+      <p class="eyebrow hero__eyebrow">Maître · Autor da carta do Miam Miam · Botafogo, Rio</p>
+
+      <div class="hero__scene" aria-hidden="true">
+        <!-- Efeito assinatura: a taça que se serve -->
+        <svg class="coupe" viewBox="0 0 320 340" role="img" aria-label="Ilustração de uma taça coupe sendo servida">
+          <defs>
+            <linearGradient id="jjLiquidGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#D89B4A"/>
+              <stop offset="100%" stop-color="#C4802F"/>
+            </linearGradient>
+            <clipPath id="jjBowlClip">
+              <path d="M60 76 C66 126 108 152 160 152 C212 152 256 126 260 76 Z"/>
+            </clipPath>
+          </defs>
+
+          <!-- líquido (dentro do bowl) -->
+          <g clip-path="url(#jjBowlClip)">
+            <g class="jj-liquid">
+              <path class="jj-wave" fill="#D89B4A"
+                d="M0 96 Q20 90 40 96 T80 96 T120 96 T160 96 T200 96 T240 96 T280 96 T320 96 T360 96 T400 96 T440 96 T480 96 T520 96 L520 114 L0 114 Z"/>
+              <rect x="30" y="112" width="270" height="60" fill="url(#jjLiquidGrad)"/>
+              <circle class="jj-bubble jj-bubble--1" cx="140" cy="138" r="3"   fill="#E8B96B" opacity="0.4"/>
+              <circle class="jj-bubble jj-bubble--2" cx="162" cy="130" r="2.5" fill="#E8B96B" opacity="0.35"/>
+              <circle class="jj-bubble jj-bubble--3" cx="182" cy="142" r="3.5" fill="#E8B96B" opacity="0.4"/>
+            </g>
+          </g>
+
+          <!-- taça em traço fino -->
+          <g fill="none" stroke="#24342A" stroke-width="2" stroke-linecap="round">
+            <path d="M56 74 C62 128 106 156 160 156 C214 156 258 128 264 74"/>
+            <ellipse cx="160" cy="74" rx="104" ry="9" opacity="0.45"/>
+            <line x1="160" y1="156" x2="160" y2="272"/>
+            <path d="M100 288 C114 279 206 279 220 288"/>
+            <line x1="100" y1="289" x2="220" y2="289"/>
+          </g>
+
+          <!-- guarnição: um raminho, aceno botânico -->
+          <g fill="none" stroke="#55684F" stroke-width="1.5" stroke-linecap="round">
+            <path d="M247 66 C252 56 256 50 260 44"/>
+            <path d="M260 44 C265 36 275 34 281 38 C276 45 266 48 260 44 Z"/>
+            <path d="M253 56 C248 52 246 47 247 42"/>
+          </g>
+        </svg>
+      </div>
+
+      <h1 class="hero__title gradient-text">João Jourdan</h1>
+      <p class="hero__sub">O anfitrião que criou os drinques do Miam Miam — o casarão de Botafogo que virou clássico do Rio.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="#trajetoria">Conhecer a trajetória</a>
+        <a class="btn btn--ghost" href="#contato">Falar com João</a>
+      </div>
+    </section>
+
+    <!-- ══════════════ O ANFITRIÃO ══════════════ -->
+    <section class="section host" id="anfitriao">
+      <div class="container">
+        <div class="host__grid">
+          <div class="host__media" data-reveal>
+            <!-- Trocar este placeholder por <img class="host__photo" src="..." alt="João Jourdan no salão do Miam Miam"> -->
+            <div class="placeholder-frame" id="foto-salao" role="img" aria-label="Espaço reservado para foto de João no salão">
+              <span>Foto do salão — substituir</span>
+            </div>
+          </div>
+          <div class="host__copy">
+            <p class="eyebrow" data-reveal>O anfitrião</p>
+            <h2 class="h2" data-reveal>Receber é ofício.</h2>
+            <p class="body" data-reveal>Desde 2005, o Miam Miam ocupa um casarão de família em Botafogo — o mesmo que pertenceu à avó da chef Roberta Ciasca — e ajudou a apresentar o conforto à mesa carioca. Entre móveis de outras décadas e tijolo aparente, uma figura atravessa essa história: João Jourdan, o maître que faz da chegada de cada cliente um pequeno ritual.</p>
+            <p class="body" data-reveal>É dele a maior parte da carta de drinques da casa. Quem senta no balcão aprende rápido: melhor do que escolher no cardápio é perguntar. Ele sabe agradar cada paladar.</p>
+          </div>
+        </div>
+
+        <dl class="host__stats" data-reveal>
+          <div class="stat">
+            <dt class="stat__number">2005</dt>
+            <dd class="stat__label">o casarão abre em Botafogo</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat__number">8</dt>
+            <dd class="stat__label">entre os melhores bartenders do Brasil — Cocktail Journey, 2014</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat__number">6+</dt>
+            <dd class="stat__label">drinques autorais na carta</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat__number">20</dt>
+            <dd class="stat__label">anos de Miam Miam celebrados em 2025</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ══════════════ TRAJETÓRIA ══════════════ -->
+    <section class="section section--alt timeline" id="trajetoria">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Trajetória</p>
+          <h2 class="h2" data-reveal>Uma história servida aos poucos.</h2>
+          <p class="section-head__desc" data-reveal>Datas aproximadas aparecem como “c.”. Memória, como um bom drinque, se serve com cuidado.</p>
+        </div>
+
+        <ol class="timeline__list">
+          <!-- VALIDAR COM JOÃO: contexto real do recorte de imprensa de 1 a 7 de novembro de 2001 (veículo e casa da época) -->
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__year">2001</p>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Primeiras notas na imprensa</h3>
+              <p>Antes do casarão, o nome já circulava: um recorte de jornal do início de novembro de 2001 registra João na cena carioca.</p>
+            </div>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__year">2005 <span class="timeline__arrow">→</span></p>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Nasce o Miam Miam</h3>
+              <p>A chef Roberta Ciasca abre, no casarão da avó em Botafogo, a casa que apresentaria o comfort food ao Rio — e que se tornaria o endereço de João.</p>
+            </div>
+          </li>
+          <!-- VALIDAR COM JOÃO: período e papel no MOK Sakebar (grafia do nome, função, anos) -->
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__year"><abbr title="data aproximada">c.</abbr> 2011</p>
+            <div class="timeline__body">
+              <h3 class="timeline__title">MOK Sakebar, Leblon</h3>
+              <p>Temporada no sakebar da Rua Dias Ferreira, hoje fechado: o repertório dos sakês somado à coqueteleira.</p>
+            </div>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__year">2014</p>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Cocktail Journey</h3>
+              <p>Um dos 8 vencedores nacionais do concurso das marcas Ketel One e Tanqueray Nº TEN, que avaliou cerca de 100 bares e restaurantes em 20 cidades do país.</p>
+            </div>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__year">2015</p>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Diageo World Class</h3>
+              <p>Classificação para a etapa brasileira da maior competição de bartenders do mundo. No mesmo ano, o Miam Miam entra no guia Michelin com o Bib Gourmand — presença mantida até o guia de 2026.</p>
+            </div>
+          </li>
+          <!-- VALIDAR COM JOÃO: vínculo atual com o Miam Miam após a reformulação de 2025 ("segue recebendo") -->
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__year">2025</p>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Vinte anos de casa</h3>
+              <p>O Miam Miam celebra duas décadas, com novos sócios e carta revisitada — e João segue recebendo como no primeiro dia.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════ A CARTA ══════════════ -->
+    <section class="section menu" id="carta">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>A carta</p>
+          <h2 class="h2" data-reveal>Drinques com assinatura.</h2>
+          <p class="section-head__desc" data-reveal>Criações que ficaram na memória da casa. Na dúvida, não escolha: pergunte ao João.</p>
+        </div>
+
+        <div class="menu__grid">
+          <article class="drink-card" data-reveal>
+            <svg class="drink-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M8 12 C10 24 17 28 24 28 C31 28 38 24 40 12"/>
+                <ellipse cx="24" cy="12" rx="16" ry="2.2" opacity="0.45"/>
+                <line x1="24" y1="28" x2="24" y2="40"/>
+                <path d="M15 42 C18 40 30 40 33 42"/>
+              </g>
+            </svg>
+            <h3 class="drink-card__name">Ruella</h3>
+            <p class="drink-card__ingredients">Vodka · Limão · Gengibre · Grenadine</p>
+            <p class="drink-card__note">O cartão de visitas da casa.</p>
+          </article>
+
+          <article class="drink-card" data-reveal>
+            <svg class="drink-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M12 8 C13 20 17 25 24 25 C31 25 35 20 36 8"/>
+                <ellipse cx="24" cy="8" rx="12" ry="1.8" opacity="0.45"/>
+                <line x1="24" y1="25" x2="24" y2="39"/>
+                <path d="M16 42 C19 40 29 40 32 42"/>
+              </g>
+            </svg>
+            <h3 class="drink-card__name">Amburana Sour</h3>
+            <p class="drink-card__ingredients">Amburana · A madeira brasileira na taça</p>
+            <p class="drink-card__note">A cor âmbar desta página nasce dele.</p>
+          </article>
+
+          <!-- VALIDAR COM JOÃO: ingredientes do Pacam -->
+          <article class="drink-card" data-reveal>
+            <svg class="drink-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M14 14 L15.5 40 C15.6 41 16.4 42 17.5 42 L30.5 42 C31.6 42 32.4 41 32.5 40 L34 14"/>
+                <ellipse cx="24" cy="14" rx="10" ry="1.8" opacity="0.45"/>
+                <line x1="20" y1="24" x2="28" y2="24" opacity="0.6"/>
+              </g>
+            </svg>
+            <h3 class="drink-card__name">Pacam</h3>
+            <p class="drink-card__ingredients">Receita da casa</p>
+            <p class="drink-card__note">O drinque com gosto de rabanada.</p>
+          </article>
+
+          <article class="drink-card" data-reveal>
+            <svg class="drink-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M16 6 L17 40 C17 41.2 18 42 19 42 L29 42 C30 42 31 41.2 31 40 L32 6"/>
+                <ellipse cx="24" cy="6" rx="8" ry="1.6" opacity="0.45"/>
+                <path d="M27 12 C30 9 33 7 37 6 C35 10 32 13 28 14"/>
+              </g>
+            </svg>
+            <h3 class="drink-card__name">Capivodka</h3>
+            <p class="drink-card__ingredients">Abacaxi · Hortelã · Pimenta</p>
+            <p class="drink-card__note">Refrescância com final quente.</p>
+          </article>
+
+          <!-- VALIDAR COM JOÃO: ingredientes do Lichee Martini -->
+          <article class="drink-card" data-reveal>
+            <svg class="drink-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M7 9 L24 27 L41 9"/>
+                <line x1="7" y1="9" x2="41" y2="9" opacity="0.45"/>
+                <line x1="24" y1="27" x2="24" y2="40"/>
+                <path d="M15 42 C18 40 30 40 33 42"/>
+                <circle cx="24" cy="15" r="2.5"/>
+              </g>
+            </svg>
+            <h3 class="drink-card__name">Lichee Martini</h3>
+            <p class="drink-card__ingredients">Lichia · Taça gelada</p>
+            <p class="drink-card__note">Doçura em ponto exato.</p>
+          </article>
+
+          <!-- VALIDAR COM JOÃO: ingredientes do Caipi du Bois -->
+          <article class="drink-card" data-reveal>
+            <svg class="drink-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M14 16 L15 40 C15 41.2 16 42 17 42 L31 42 C32 42 33 41.2 33 40 L34 16"/>
+                <ellipse cx="24" cy="16" rx="10" ry="1.8" opacity="0.45"/>
+                <circle cx="24" cy="10" r="3.5"/>
+                <line x1="20.5" y1="10" x2="27.5" y2="10" opacity="0.6"/>
+              </g>
+            </svg>
+            <h3 class="drink-card__name">Caipi du Bois</h3>
+            <p class="drink-card__ingredients">Receita da casa</p>
+            <p class="drink-card__note">A caipirinha do jeito do João.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ RAÍZES E REPERTÓRIO ══════════════ -->
+    <section class="section section--alt roots" id="raizes">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Raízes e repertório</p>
+          <h2 class="h2" data-reveal>O que se aprende antes do balcão.</h2>
+        </div>
+
+        <div class="roots__grid">
+          <!-- VALIDAR COM JOÃO: formação/estudo em biologia (o texto diz "conhece", não "formado em") -->
+          <div class="roots__col" data-reveal>
+            <p class="roots__label"><span class="roots__marker">◆</span> Botânica</p>
+            <p>Antes das taças, as plantas: João conhece biologia, e isso aparece no copo — hortelã, gengibre, abacaxi, pimenta e madeiras brasileiras tratados como matéria viva, não como enfeite.</p>
+          </div>
+          <!-- VALIDAR COM JOÃO: termo de fé que ele prefere (candomblé, umbanda, axé) e se quer o tema no site.
+               Se preferir remover, apague esta coluna inteira — o grid se ajusta sozinho. -->
+          <div class="roots__col" data-reveal>
+            <p class="roots__label"><span class="roots__marker">◆</span> Fé</p>
+            <p>Devoto das religiões de matriz africana, carrega delas o que também sustenta uma boa casa: respeito pelo que se serve, cuidado com quem chega e a certeza de que receber é fundamento.</p>
+          </div>
+          <div class="roots__col" data-reveal>
+            <p class="roots__label"><span class="roots__marker">◆</span> Sala</p>
+            <p>Maître é ofício de escuta. Ler a mesa, sugerir sem impor, lembrar o drinque da última visita — hospitalidade como técnica e como talento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ RECONHECIMENTO ══════════════ -->
+    <section class="section recognition" id="reconhecimento">
+      <div class="container">
+        <p class="eyebrow recognition__eyebrow" data-reveal>Reconhecimento</p>
+        <p class="recognition__context" data-reveal>Prêmios do bartender — e da casa que ele ajuda a construir.</p>
+        <blockquote class="recognition__quote" data-reveal>
+          <p>“Ele sabe agradar cada paladar.”</p>
+          <cite>— Frequentadores do Miam Miam, em avaliações públicas</cite>
+        </blockquote>
+      </div>
+
+      <div class="marquee" aria-label="Distinções e prêmios">
+        <div class="marquee__track">
+          <span class="marquee__item">Diageo World Class · Brasil 2015</span>
+          <span class="marquee__sep">◆</span>
+          <span class="marquee__item">Cocktail Journey · Um dos 8 melhores do Brasil, 2014</span>
+          <span class="marquee__sep">◆</span>
+          <span class="marquee__item">Michelin Bib Gourmand · Miam Miam, desde 2015</span>
+          <span class="marquee__sep">◆</span>
+          <span class="marquee__item">Veja Rio Comer &amp; Beber · Melhor carta de drinques</span>
+          <span class="marquee__sep">◆</span>
+          <span class="marquee__item">Rio Show, O Globo · Melhor moderno 2007–2008</span>
+          <span class="marquee__sep">◆</span>
+          <span class="marquee__item" aria-hidden="true">Diageo World Class · Brasil 2015</span>
+          <span class="marquee__sep" aria-hidden="true">◆</span>
+          <span class="marquee__item" aria-hidden="true">Cocktail Journey · Um dos 8 melhores do Brasil, 2014</span>
+          <span class="marquee__sep" aria-hidden="true">◆</span>
+          <span class="marquee__item" aria-hidden="true">Michelin Bib Gourmand · Miam Miam, desde 2015</span>
+          <span class="marquee__sep" aria-hidden="true">◆</span>
+          <span class="marquee__item" aria-hidden="true">Veja Rio Comer &amp; Beber · Melhor carta de drinques</span>
+          <span class="marquee__sep" aria-hidden="true">◆</span>
+          <span class="marquee__item" aria-hidden="true">Rio Show, O Globo · Melhor moderno 2007–2008</span>
+          <span class="marquee__sep" aria-hidden="true">◆</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ O PRÓXIMO CAPÍTULO ══════════════ -->
+    <!-- VALIDAR COM JOÃO: formulação do projeto (público, propósito, termos). Projeto ainda sem nome — não batizar. -->
+    <section class="section section--alt chapter" id="capitulo">
+      <div class="container chapter__container">
+        <p class="eyebrow" data-reveal>O próximo capítulo</p>
+        <h2 class="h2" data-reveal>Um restaurante de brasilidades.</h2>
+        <p class="body chapter__lead" data-reveal>O sonho que João serve devagar: uma casa de brasilidades — do dendê ao pequi, da farinha ao mar — onde cozinha e salão empregam, formam e acolhem pessoas trans, LGBTQIAP+ e em situação de vulnerabilidade. Um lugar onde o receber bem, aprendido em vinte anos de balcão, vira porta de entrada: de quem chega para jantar e de quem nunca teve a primeira chance.</p>
+        <p class="chapter__status" data-reveal>Em gestação, ainda sem nome. As melhores receitas levam tempo.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════ CONTATO ══════════════ -->
+    <section class="section dark contact" id="contato">
+      <div class="container contact__grid">
+        <div class="contact__copy">
+          <p class="contact__pill" data-reveal>◆ À sua mesa</p>
+          <h2 class="h2 h2--on-dark" data-reveal>Um drinque, uma conversa.</h2>
+          <p class="contact__desc" data-reveal>Para convites, eventos, consultoria de cartas ou só um alô — os canais estão abertos. Sem pressa, como todo bom serviço.</p>
+
+          <ul class="contact__channels">
+            <!-- Substituir os três canais abaixo pelos contatos reais (buscar por data-todo="contato") -->
+            <li data-reveal>
+              <span class="contact__label">WhatsApp</span>
+              <a class="contact__link" href="#contato" data-todo="contato">+55 21 00000-0000</a>
+            </li>
+            <li data-reveal>
+              <span class="contact__label">E-mail</span>
+              <a class="contact__link" href="#contato" data-todo="contato">contato@exemplo.com.br</a>
+            </li>
+            <li data-reveal>
+              <span class="contact__label">Instagram</span>
+              <a class="contact__link" href="#contato" data-todo="contato">@perfil-do-joao</a>
+            </li>
+          </ul>
+          <p class="contact__hint">Canais em atualização — em breve nos endereços definitivos.</p>
+        </div>
+
+        <div class="contact__media" data-reveal>
+          <!-- Trocar este placeholder por <img class="contact__photo" src="..." alt="Retrato de João Jourdan"> -->
+          <div class="placeholder-frame placeholder-frame--on-dark" id="foto-retrato" role="img" aria-label="Espaço reservado para retrato de João">
+            <span>Retrato de João — substituir</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <p class="footer__wordmark">João Jourdan</p>
+          <p class="footer__desc">Maître e criador de drinques. Botafogo, Rio de Janeiro.</p>
+        </div>
+        <nav class="footer__col" aria-label="Navegação do rodapé">
+          <p class="footer__title">Navegação</p>
+          <ul>
+            <li><a href="#anfitriao">O anfitrião</a></li>
+            <li><a href="#trajetoria">Trajetória</a></li>
+            <li><a href="#carta">A carta</a></li>
+            <li><a href="#capitulo">O próximo capítulo</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <p class="footer__title">Contato</p>
+          <ul>
+            <li><a href="#contato" data-todo="contato">WhatsApp</a></li>
+            <li><a href="#contato" data-todo="contato">E-mail</a></li>
+            <li><a href="#contato" data-todo="contato">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 João Jourdan.</p>
+        <p>Feito com cuidado no Rio.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
