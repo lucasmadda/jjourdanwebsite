@@ -11,10 +11,13 @@ python3 -m http.server 8080
 
 ## Publicar no GitHub Pages
 
-1. Faça o merge deste branch em `main`.
-2. No GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**.
-3. Escolha `main` e a pasta `/ (root)`. Salve.
-4. O site fica no ar em `https://<usuario>.github.io/jjourdanwebsite/`.
+A publicação é automática: todo push em `main` dispara o workflow
+`.github/workflows/pages.yml`, que publica o site em
+`https://<usuario>.github.io/jjourdanwebsite/`. Se for a primeira execução,
+o próprio workflow habilita o Pages no repositório.
+
+Caso prefira desativar o workflow, dá para publicar manualmente em
+**Settings → Pages → Deploy from a branch** (`main`, pasta `/ (root)`).
 
 ## Estrutura
 
