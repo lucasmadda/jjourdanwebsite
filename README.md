@@ -35,8 +35,9 @@ A única dependência externa é o `@import` do Google Fonts (Fraunces + Inter) 
 
 | O quê | Onde |
 |---|---|
-| Foto do salão | `index.html`, elemento `#foto-salao` — trocar o `<div class="placeholder-frame">` por `<img>` (o comentário no HTML mostra como) |
-| Retrato de João | `index.html`, elemento `#foto-retrato` — mesmo procedimento |
+| Foto da seção "O anfitrião" | `index.html`, `#foto-salao` — hoje mostra a foto dos drinques da reportagem premiada da Veja (2008, reprodução do recorte da família); quando houver uma foto atual do João no salão, trocar o `src` mantendo a estrutura |
+| Retrato de João | `index.html`, elemento `#foto-retrato` — trocar o `<div class="placeholder-frame">` por `<img>` (o comentário no HTML mostra como) |
+| Foto de 2001 na timeline | `assets/joao-2001.jpg` — recorte da Folha Dirigida (foto: Salvador Scofano), tratado em duotone da paleta; confirmar com João se ele aprova o uso |
 | WhatsApp, e-mail e Instagram | Buscar `data-todo="contato"` no `index.html` (6 ocorrências: 3 na seção de contato, 3 no rodapé) e colocar links reais (`https://wa.me/…`, `mailto:…`, `https://instagram.com/…`). Depois, remover a linha "Canais em atualização…" |
 
 ## Checklist — VALIDAR COM JOÃO antes de divulgar
@@ -44,7 +45,7 @@ A única dependência externa é o `@import` do Google Fonts (Fraunces + Inter) 
 Cada item tem um comentário `<!-- VALIDAR COM JOÃO -->` no ponto exato do `index.html`:
 
 1. **Título** — a imprensa o registra como *barman* do Miam Miam; o site o apresenta como *maître* (informação da família/amigos). Confirmar o(s) título(s).
-2. **Militância estudantil (2001)** — a timeline abre com a liderança no movimento estudantil (Folha Dirigida, 1º–7/11/2001, p. 9). Confirmar se ele quer esse capítulo no site e como prefere descrevê-lo.
+2. **Militância estudantil (2001)** — a timeline abre com a liderança no movimento estudantil (Folha Dirigida, 1º–7/11/2001, p. 9), incluindo a foto de Salvador Scofano em que ele aparece aos 17. Confirmar se ele quer esse capítulo (e a foto) no site e como prefere descrevê-lo.
 3. **MOK Sakebar** — a entrada saiu da timeline: os próprios recortes mostram que, em 2009, o barman do MOK era Fabiano Dias; nenhum documento liga João à casa. Se ele teve passagem real por lá, colher período e função para recolocar.
 4. **Vínculo atual** — se João segue no Miam Miam após a reformulação dos 20 anos (2025).
 5. **Fé** — o termo que ele prefere (candomblé, umbanda, axé…) e se quer o tema no site. A coluna "Fé" da seção Raízes pode ser removida sem quebrar o layout.
