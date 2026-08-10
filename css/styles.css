@@ -251,19 +251,37 @@ a:focus-visible, button:focus-visible {
   gap: var(--space-6);
   align-items: center;
 }
-.host__figure { margin: 0; }
+/* Página de revista: moldura branca, fólio e legenda dentro da margem */
+.host__figure {
+  --tilt: 1deg;
+  margin: 0;
+  background: var(--white);
+  padding: 14px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+.host__folio {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: 10px;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding: 0 2px 10px;
+}
 .host__figure img {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-sm);
 }
 .host__figure figcaption {
   font-size: 12px;
   color: var(--fg-muted);
-  margin-top: var(--space-2);
+  padding: 10px 2px 0;
   letter-spacing: 0.04em;
 }
 .host__copy .body { margin-top: var(--space-3); }
@@ -352,7 +370,8 @@ a:focus-visible, button:focus-visible {
 }
 .timeline__body > p { margin-top: var(--space-1); }
 .timeline__figure {
-  margin: var(--space-3) 0 0;
+  --tilt: -1.4deg;
+  margin: var(--space-4) 0 var(--space-1);
   max-width: 400px;
 }
 .timeline__figure img {
@@ -367,6 +386,109 @@ a:focus-visible, button:focus-visible {
   color: var(--fg-muted);
   margin-top: var(--space-1);
   letter-spacing: 0.04em;
+}
+
+/* ─── EFEITOS EDITORIAIS — papel de imprensa ────────────────── */
+/* Recortes/páginas inclinados que "assentam" ao entrar e se
+   endireitam no hover, como papel sobre a mesa */
+.paper {
+  transform: rotate(var(--tilt, -1.2deg));
+  transition: transform var(--duration-med) var(--ease-out);
+  will-change: transform;
+}
+.paper:hover { transform: rotate(0deg); }
+html.js [data-reveal] .paper {
+  transform: rotate(calc(var(--tilt, -1.2deg) - 4deg)) translateY(12px);
+}
+html.js [data-reveal].is-visible .paper {
+  transform: rotate(var(--tilt, -1.2deg));
+  transition: transform 0.9s cubic-bezier(0.2, 1.5, 0.4, 1) 0.25s;
+}
+html.js [data-reveal].is-visible .paper:hover {
+  transform: rotate(0deg);
+  transition: transform var(--duration-med) var(--ease-out);
+}
+
+/* Fita adesiva nos cantos do recorte de jornal */
+.paper--tape { position: relative; }
+.paper--tape::before,
+.paper--tape::after {
+  content: '';
+  position: absolute;
+  width: 84px;
+  height: 24px;
+  top: -10px;
+  background: rgba(243, 235, 221, 0.55);
+  border: 1px solid rgba(36, 52, 42, 0.08);
+  box-shadow: 0 2px 5px rgba(36, 52, 42, 0.08);
+  z-index: 2;
+}
+.paper--tape::before { left: -22px; transform: rotate(-35deg); }
+.paper--tape::after { right: -22px; transform: rotate(35deg); }
+
+/* Masthead de jornal no alto da Trajetória */
+.masthead {
+  max-width: 640px;
+  margin: 0 auto var(--space-4);
+  border-top: 3px solid var(--brand-deep);
+}
+.masthead__dateline {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-top: 3px;
+  border-top: 1px solid rgba(36, 52, 42, 0.45);
+  border-bottom: 1px solid rgba(36, 52, 42, 0.2);
+  padding: 8px 4px;
+  font-size: 10px;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* Traço de caneta sob a citação */
+.quote-mark { position: relative; white-space: nowrap; }
+.quote-stroke {
+  position: absolute;
+  left: -2%;
+  bottom: -0.16em;
+  width: 104%;
+  height: 0.3em;
+  color: var(--brand-mid);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.quote-stroke path {
+  stroke-dasharray: 310;
+  stroke-dashoffset: 310;
+}
+html:not(.js) .quote-stroke path { stroke-dashoffset: 0; }
+html.js [data-reveal].is-visible .quote-stroke path {
+  animation: quoteStroke 1s var(--ease-out) 0.5s forwards;
+}
+@keyframes quoteStroke {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Preço de época com pontilhado de cardápio */
+.drink-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: var(--space-2);
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+.drink-card__price i {
+  flex: 1;
+  border-bottom: 2px dotted rgba(36, 52, 42, 0.25);
+  transform: translateY(-3px);
+}
+.drink-card__price span:last-child {
+  font-weight: var(--fw-semibold);
+  color: var(--brand-deep);
+  font-variant-numeric: tabular-nums;
 }
 
 /* ─── A CARTA ───────────────────────────────────────────────── */
@@ -694,4 +816,9 @@ html.js .timeline__item:nth-child(8) { transition-delay: 0.56s; }
 
   .footer__grid { grid-template-columns: 1fr; }
   .footer__bottom { flex-direction: column; align-items: flex-start; }
+
+  .masthead__dateline { font-size: 9px; }
+  .masthead__dateline span:nth-child(2) { display: none; }
+  .paper--tape::before { left: -12px; }
+  .paper--tape::after { right: -12px; }
 }
